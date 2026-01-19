@@ -176,7 +176,7 @@ if __name__ == "__main__":
     content_generator = PPTCotentGeneratorPlatinum()
     summary = content_generator.generate_content(
         text=text,
-        topic="ML vs DL",
+        topic="",
         num_slides=5,
         style="Professional, concise",
         complexity="Intermediate",

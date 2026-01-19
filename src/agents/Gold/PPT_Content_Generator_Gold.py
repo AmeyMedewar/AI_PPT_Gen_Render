@@ -117,18 +117,12 @@ Slide 2: [Slide Title]
 
 if __name__ == "__main__":
     # Example usage
-    text = """
-    Artificial Intelligence (AI) is transforming industries by automating tasks,
-    improving decision-making, and enabling new products and services.
-    Key applications include natural language processing, computer vision,
-    and predictive analytics. While AI brings opportunities, it also raises
-    concerns such as job displacement, bias in decision-making, and data privacy.
-    """
+    text = ""
 
     content_generator = PPTCotentGeneratorGold()
     summary = content_generator.generate_content(
         text=text,
-        topic="AI in Industry",
+        topic="",
         num_slides=5,
         style="Professional, concise",
         complexity="Intermediate",
