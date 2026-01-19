@@ -74,7 +74,7 @@ class SlideGeneratorPlatinum:
         BASE_DIR = Path(__file__).resolve().parent.parent.parent
         
         # Define image paths relative to project root
-        DATA_DIR = BASE_DIR / "Data"
+        DATA_DIR = "Data"
         
         title_lower = title.lower()
 
