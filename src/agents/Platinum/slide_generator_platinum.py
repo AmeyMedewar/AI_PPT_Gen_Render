@@ -4,6 +4,8 @@ from pptx.util import Pt, Inches
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN, MSO_AUTO_SIZE
 import regex as re
+from pathlib import Path
+
 
 
 class SlideGeneratorPlatinum:
@@ -66,17 +68,23 @@ class SlideGeneratorPlatinum:
 
         return slides
 
-    def select_image(self,title: str) -> str:
+    def select_image(self, title: str) -> str:
         """Return image path based on keywords in title."""
+        # Get the project root directory
+        BASE_DIR = Path(__file__).resolve().parent.parent.parent
+        
+        # Define image paths relative to project root
+        DATA_DIR = BASE_DIR / "Data"
+        
         title_lower = title.lower()
 
         if "cricket" in title_lower:
-            return r"C:\Users\Amey\OneDrive\Desktop\Agentic_AI_Project\Data\default.jpg"
+            return str(DATA_DIR / "default.jpg")
         elif "ai" in title_lower or "artificial intelligence" in title_lower:
-            return r"C:\Users\Amey\OneDrive\Desktop\AI_based_ppt_genrator\AI.jpg"
+            return str(BASE_DIR / "AI.jpg")
         else:
-            return r"C:\Users\Amey\OneDrive\Desktop\AI_based_ppt_genrator\Data\default.jpg"
-
+            return str(DATA_DIR / "default.jpg")
+    
     def add_title_slide(self,pres, slide_info):
         slide = pres.slides.add_slide(pres.slide_layouts[6])  # Blank layout
 
