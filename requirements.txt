@@ -1,0 +1,28 @@
+# Core AI / LLM Frameworks
+langchain
+google-generativeai
+
+# PDF and file handling
+PyMuPDF
+
+# Web and API frameworks
+streamlit
+fastapi
+uvicorn
+
+# Utilities
+pydantic
+python-dotenv
+requests
+
+# Optional (for working with presentations)
+python-pptx
+
+# (Optional) for vector embeddings or caching
+faiss-cpu
+
+python-docx
+langchain-google-genai
+langchain-core
+regex
+python-multipart
